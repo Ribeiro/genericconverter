@@ -1,0 +1,32 @@
+<list>
+  <maps>
+    <map>
+      <entry>
+        <string>DEST</string>
+        <string>GEOVANNY</string>
+      </entry>
+      <entry>
+        <string>ID</string>
+        <int>123</int>
+      </entry>
+      <entry>
+        <string>VALOR</string>
+        <double>10000.0</double>
+      </entry>
+    </map>
+    <map>
+      <entry>
+        <string>DEST</string>
+        <string>CLAUDEMIRTON</string>
+      </entry>
+      <entry>
+        <string>ID</string>
+        <int>456</int>
+      </entry>
+      <entry>
+        <string>VALOR</string>
+        <double>34000.0</double>
+      </entry>
+    </map>
+  </maps>
+</list>
