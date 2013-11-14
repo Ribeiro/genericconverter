@@ -3,6 +3,7 @@ package br.com.gigio.genericconverter.enums;
 import java.util.HashMap;
 import java.util.Map;
 import br.com.gigio.genericconverter.domain.JPMaps;
+import br.com.gigio.genericconverter.implementations.CustomXmlListOfMapsConverter;
 import br.com.gigio.genericconverter.implementations.ListOfMapsXmlConverter;
 import br.com.gigio.genericconverter.implementations.XmlListOfMapsConverter;
 import br.com.gigio.genericconverter.interfaces.Converter;
@@ -16,6 +17,7 @@ public enum ConverterFactory {
             converters = new HashMap<Key, Converter<?, ?>>();
             converters.put(new Key(JPMaps.class, String.class), new ListOfMapsXmlConverter());
             converters.put(new Key(String.class, JPMaps.class), new XmlListOfMapsConverter());
+            converters.put(new Key(String.class, Object.class), new CustomXmlListOfMapsConverter());
     }
 
     public static ConverterFactory getInstance() {
