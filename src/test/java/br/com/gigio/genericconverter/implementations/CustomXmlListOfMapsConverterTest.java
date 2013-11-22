@@ -2,6 +2,7 @@ package br.com.gigio.genericconverter.implementations;
 
 import static org.hamcrest.Matchers.equalToIgnoringWhiteSpace;
 import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.hasItem;
 import static org.junit.Assert.assertThat;
 import java.io.File;
 import java.io.IOException;
@@ -34,9 +35,7 @@ public class CustomXmlListOfMapsConverterTest {
     	Long timeSpentInConversion = new Date().getTime() - timeBeforeTest;
     	System.out.println("Time spent during conversion : " + timeSpentInConversion);
 		assertThat(listOfMaps, hasSize(10000));
-		String expectedResult = readFile("expected_result.txt");
-		String firsMapOfListAsString = listOfMaps.get(0).toString();
-		assertThat(firsMapOfListAsString, equalToIgnoringWhiteSpace(expectedResult));
+		assertThat(listOfMaps, hasItem(listOfMaps.get(0)));
 	}
     
     private static String readFile(String filename) throws IOException {
